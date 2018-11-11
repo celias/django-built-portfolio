@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-{% load staticfiles %}
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Gabriella DiVentura Web Developer Portfolio">
@@ -33,6 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+          <h4><a class="nav-item nav-link" href="mailto:gabrielladiv@gmail.com"> ✉️ </a></h4>
           <a class="nav-item nav-link" href="https://github.com/celias">GitHub</a>
           <a class="nav-item nav-link" href="{% static 'gabrielladiventurar.pdf'%}">Resume</a>
           <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
@@ -42,27 +43,17 @@
   </header>
 
   <main role="main">
-  <div class="container">
-         <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-         {{ blog.pub_date_pretty }}
-         <br />
-         <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
-         <br />
-         <p>{{ blog.body }}</p>
-         {{ blog.title }}
-<br />
-<hr />
-<h4><a href="{% url 'allblogs' %}"> 🚀 return to all blogs...</a></h4>
-
-
-  </div>
-
-  </main>
-  <footer class="text-muted">
-    <div class="container text-center">
-      <p>&copy geediv {% now "Y" %}</p>
+    <div class="container">
+      <h1 class="text-center pt-3">{{ blog.title }}</h1>
+      <p class="text-center">{{ blog.pub_date_pretty }}</p>
+      <img class="img-fluid rounded mx-auto d-block" src="{{ blog.image.url }}" />
+      <br />
+      <br />
+      <p>{{ blog.body }}</p>
+      <hr />
+     <span> <h2><a href="{% url 'allblogs' %}"> 🛸 </a></h2></span>
     </div>
-  </footer>
+  </main>
 
 
   <!-- Bootstrap core JavaScript

@@ -64,7 +64,7 @@
         {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src="{{ job.image.url }}">
+              <a href="{{ job.hostedprojecturl }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
               <div class="card-body">
                 <p class="card-text">{{ job.summary }}</p>
                 <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src={% static 'octocat.png'%}/></a>
