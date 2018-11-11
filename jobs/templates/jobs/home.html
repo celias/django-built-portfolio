@@ -49,6 +49,8 @@
         <p class="lead">I'm a developer, and this is my first Django website.</p>
         <h3 class="lead text-muted">I 😻 to code and learn new technologies.</h3>
         <p>(See my other portfolio <a href="https://www.gabrielladiventura.press">here</a>)</p>
+        <br />
+        <img width=150 src="{% static 'beacon.jpg' %}" class="rounded-circle img-fluid">
         {% comment %} <img src={% static 'mw.jpg' %} {% endcomment %}
         {% comment %} <p>
           <a href="mailto:gabrielladiv@gmail.com" class="btn btn-primary my-2">Email</a>
@@ -66,6 +68,8 @@
             <div class="card mb-4 box-shadow">
               <a href="{{ job.hostedprojecturl }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
               <div class="card-body">
+              <h6 class="card-title">{{ job.jobtitle }}</h6>
+              <hr />
                 <p class="card-text">{{ job.summary }}</p>
                 <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src={% static 'octocat.png'%}/></a>
               </div>

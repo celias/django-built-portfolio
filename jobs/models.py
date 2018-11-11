@@ -8,3 +8,7 @@ class Job(models.Model):
     summary = models.TextField()
     githublink = models.CharField(max_length=100, default="")
     hostedprojecturl = models.CharField(max_length=100, default="")
+    jobtitle = models.CharField(max_length=100, default="")
+
+    def __str__(self):
+        return self.jobtitle
