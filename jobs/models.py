@@ -6,3 +6,4 @@ from django.db import models
 class Job(models.Model):
     image = models.ImageField(upload_to='images/')
     summary = models.TextField()
+    githublink = models.CharField(max_length=100, default="")
