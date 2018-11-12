@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-{% load staticfiles %}
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Gabriella DiVentura Web Developer Portfolio">
@@ -34,6 +35,7 @@
           <a class="nav-item nav-link active" href="#">Home</a>
           <h4><a class="nav-item nav-link" href="mailto:gabrielladiv@gmail.com"> ✉️ </a></h4>
           <a class="nav-item nav-link" href="https://github.com/celias">Github</a>
+          <a class="nav-item nav-link" href="https://www.linkedin.com/in/gabrielladiventura/">LinkedIn</a>
           <a class="nav-item nav-link" href="{% static 'gabrielladiventurar.pdf'%}">Resume</a>
           <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
@@ -51,10 +53,7 @@
         <p>(See my other portfolio <a href="https://www.gabrielladiventura.press">here</a>)</p>
         <br />
         <img width=150 src="{% static 'beacon.jpg' %}" class="rounded-circle img-fluid">
-        {% comment %} <img src={% static 'mw.jpg' %} {% endcomment %}
-        {% comment %} <p>
-          <a href="mailto:gabrielladiv@gmail.com" class="btn btn-primary my-2">Email</a>
-        </p> {% endcomment %}
+        </p>
       </div>
     </section>
 
@@ -63,15 +62,15 @@
 
         <div class="row">
 
-        {% for job in jobs.all %}
+          {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
               <a href="{{ job.hostedprojecturl }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
               <div class="card-body">
-              <h6 class="card-title">{{ job.jobtitle }}</h6>
-              <hr />
+                <h6 class="card-title">{{ job.jobtitle }}</h6>
+                <hr />
                 <p class="card-text">{{ job.summary }}</p>
-                <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src={% static 'octocat.png'%}/></a>
+                <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src="{% static 'octocat.png' %}" /></a>
               </div>
             </div>
           </div>
@@ -83,7 +82,7 @@
       </div>
     </div>
 
- 
+
 
   </main>
   <footer class="text-muted">

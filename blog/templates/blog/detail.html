@@ -25,18 +25,19 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}"> Gabriella DiVentura</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Gabriella DiVentura</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+          <a class="nav-item nav-link" href="#">Home</a>
           <h4><a class="nav-item nav-link" href="mailto:gabrielladiv@gmail.com"> ✉️ </a></h4>
-          <a class="nav-item nav-link" href="https://github.com/celias">GitHub</a>
+          <a class="nav-item nav-link" href="https://github.com/celias">Github</a>
+          <a class="nav-item nav-link" href="https://www.linkedin.com/in/gabrielladiventura/">LinkedIn</a>
           <a class="nav-item nav-link" href="{% static 'gabrielladiventurar.pdf'%}">Resume</a>
-          <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
     </nav>
@@ -51,7 +52,9 @@
       <br />
       <p>{{ blog.body }}</p>
       <hr />
-     <span> <h2><a href="{% url 'allblogs' %}"> 🛸 </a></h2></span>
+      <span>
+        <h2><a href="{% url 'allblogs' %}"> 🛸 </a></h2>
+      </span>
     </div>
   </main>
 
