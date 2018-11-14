@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Gabriella DiVentura Web Developer Portfolio">
   <meta name="author" content="Gabriella DiVentura">
-  <link rel="icon" href="../../../../favicon.ico">
 
   <title>{{ blog.title }}</title>
 
@@ -32,11 +31,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Home</a>
+          <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
           <h4><a class="nav-item nav-link" href="mailto:gabrielladiv@gmail.com"> ✉️ </a></h4>
           <a class="nav-item nav-link" href="https://github.com/celias">Github</a>
           <a class="nav-item nav-link" href="https://www.linkedin.com/in/gabrielladiventura/">LinkedIn</a>
-          <a class="nav-item nav-link" href="{% static 'gabrielladiventurar.pdf'%}">Resume</a>
+          <a class="nav-item nav-link" href="{% static 'GabriellaDiventuraR.pdf'%}">Resume</a>
           <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
