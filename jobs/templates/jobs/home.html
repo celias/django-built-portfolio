@@ -43,44 +43,65 @@
     </nav>
   </header>
 
-  <main role="main">
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading"> 👋 Hi, I'm Gabriella.</h1>
-        <p class="lead">I'm a developer, and this is my first Django website.</p>
-        <h3 class="lead text-muted">I 😻 to code and learn new technologies.</h3>
-        <p>(See my other portfolio <a href="https://www.gabrielladiventura.press">here</a>)</p>
-        <br />
-        <img width=150 src="{% static 'beacon.jpg' %}" class="rounded-circle img-fluid">
-        </p>
-      </div>
-    </section>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
+  <section class="jumbotron text-center" style="height: 500px;">
+    <h1 class="display-3"> 👋 Hi, I'm Gabriella.</h1>
+    <p class="lead text-muted">I'm a Full Stack Web Developer with a background in Visual Arts &
+      Philosophy.</p>
+    <br />
+    <br />
+    <img width=150 src="{% static 'beacon.jpg' %}" class="rounded-circle img-fluid">
+  </section>
+  <div class="container" style="padding: 20px; width: 700px;">
+    <h1 class="display-4">Why code?</h1>
+    <hr />
+    <p>I started
+      coding about two years ago because I was bored, and wanted to learn something new. Little did I know how
+      obsessed I would become with programming.</p>
+    Following my obession, passion, and drive to be a self-taught
+    developer, I made the
+    decision to attend a bootcamp; when I arrived I was commited to learning and growing in the vast and strange world
+    of web
+    development.</p>
+    <p>At DevMountain, I spent majority of my time learning <b class="font-weight-bold">JavaScript,
+        React,
+        Node,
+        Express, SQL, HTML5, CSS3</b>, and more libraries and dependencies than I'd like to list here.</p>
+    <p>The most
+      important skill
+      I learned though, were not the languages or libraries, but <em>how</em> to learn. As a developer, I am
+      <em>constantly</em> developing and honing my skillset. With that said, this is my first <b>Django</b> site!</p>
 
-        <div class="row">
+    <p>(See my other portfolio <a href="https://www.gabrielladiventura.press">here</a>)</p>
 
-          {% for job in jobs.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <a href="{{ job.hostedprojecturl }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
-              <div class="card-body">
-                <h6 class="card-title">{{ job.jobtitle }}</h6>
-                <hr />
-                <p class="card-text">{{ job.summary }}</p>
-                <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src="{% static 'Octocat.png' %}"></a>
-              </div>
+  </div>
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+
+        {% for job in jobs.all %}
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <a href="{{ job.hostedprojecturl }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+            <div class="card-body">
+              <h6 class="card-title">{{ job.jobtitle }}</h6>
+              <hr />
+              <p class="card-text">{{ job.summary }}</p>
+              <a href="{{ job.githublink }}"><img class="img-fluid" width="45" height="45" src="{% static 'Octocat.png' %}"></a>
             </div>
           </div>
-          {% endfor %}
-
-
         </div>
+        {% endfor %}
+
 
       </div>
+
     </div>
+  </div>
 
 
 
